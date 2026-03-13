@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+*.egg-info/
+
+# Virtual environments
+venv/
+.venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Environment
+.env
+*.env
+
+# Model weights
+*.pth
+*.pt
+*.onnx
+checkpoints/
+weights/
+
+# Dataset (too large)
+dataset/
+datasets/
+data/
+**/animals/
+**/breeds/
+**/train/
+**/val/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

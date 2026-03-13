@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  animal-classifier:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./frontend:/app/frontend  # 프론트엔드 파일 마운트
+    environment:
+      - CUDA_VISIBLE_DEVICES=0   # GPU 사용
+    restart: unless-stopped
+    
+    # 헬스체크 
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3

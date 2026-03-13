@@ -1,0 +1,12 @@
+torch==2.8.0+cu128
+torchvision==0.23.0+cu128
+Pillow==10.4.0
+fastapi==0.115.5
+uvicorn==0.32.1
+python-multipart==0.0.17
+
+# 서버용
+gunicorn==23.0.0
+
+# PyTorch CUDA 버전 다운로드용
+--extra-index-url https://download.pytorch.org/whl/cu128
