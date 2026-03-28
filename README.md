@@ -168,22 +168,22 @@ config = {
 따라서 Cross-Entropy Loss와 Adam 옵티마이저를 사용하였습니다.
 
 ### Cross-Entropy Loss
-\[
+$$
 \mathcal{L}_{CE} = - \sum_{c=1}^{C} y_c \log(\hat{y}_c)
-\]
+$$
 - \(C\) : 클래스 수  
 - \(y_c\) : 실제 레이블 (원-핫)  
 - \(\hat{y}_c\) : 모델 예측 확률 (Softmax 출력)  
 
 ### 멀티헤드 구조 손실 합산
-\[
+$$
 \mathcal{L}_{total} = \mathcal{L}_{animal} + \mathbf{1}_{\text{animal=pig}} \cdot \mathcal{L}_{pig\_breed}
-\]
+$$
 
 ### Adam 옵티마이저
-\[
+$$
 \theta_{t+1} = \theta_t - \eta \frac{m_t}{\sqrt{v_t} + \epsilon}
-\]
+$$
 - 학습률 적응형 업데이트, 빠른 수렴과 안정적 학습 지원
 
 
